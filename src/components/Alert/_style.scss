@@ -1,0 +1,22 @@
+.alt{
+    width: 100%;
+    padding:20px 10px;
+}
+
+.alt-default {
+    @include alt-style($primary)
+}
+
+.alt-success {
+    @include alt-style($success)
+
+}
+
+.alt-danger {
+    @include alt-style($danger)
+
+}
+.alt-warning {
+    @include alt-style($warning)
+
+}

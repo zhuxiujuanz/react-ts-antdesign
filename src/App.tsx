@@ -4,6 +4,8 @@ import Button, {ButtonType, ButtonSize} from "./components/Button/button";
 import Alert from "./components/Alert/alert";
 import Menu from "./components/Menu/menu";
 import MenuItem from "./components/Menu/menuItem";
+import SubMenu from './components/Menu/subMenu'
+
 const App:React.FC = () =>{
   return (
     <div className="App">
@@ -17,26 +19,43 @@ const App:React.FC = () =>{
         <Button btnType={ButtonType.Link} href="http://www.baidu.com" target="_blank">hello href</Button> */}
         {/* <Alert  title={'222'} />  */}
 
-        <Menu  onSelect={(index) => alert(index)} defaultIndex={0}>
-          <MenuItem index={0} >
-          aaa
+        {/* <Menu defaultIndex={'0'} onSelect={(index) => {alert(index)}}>
+          <MenuItem>
+            cool link
           </MenuItem>
-          <MenuItem index={1} disabled>
-          bbb
+          <MenuItem disabled>
+            cool link 2
+          </MenuItem> 
+          <SubMenu title="dropdown">
+            <MenuItem>
+              dropdown 1
+            </MenuItem>
+            <MenuItem>
+              dropdown 2
+            </MenuItem>
+          </SubMenu>        
+          <MenuItem>
+            cool link 3
           </MenuItem>
-          <MenuItem index={2}>
-          ccc
+        </Menu> */}
+
+        <Menu defaultIndex={'0'} onSelect={(index) => {alert(index)}} mode="vertical" defaultOpenSubMenus={['2']}>
+          <MenuItem>
+            cool link
           </MenuItem>
-        </Menu>
-        <Menu  mode="vertical" onSelect={(index) => alert(index)} defaultIndex={0}>
-          <MenuItem index={0} >
-          aaa
-          </MenuItem>
-          <MenuItem index={1} disabled>
-          bbb
-          </MenuItem>
-          <MenuItem index={2}>
-          ccc
+          <MenuItem disabled>
+            cool link 2
+          </MenuItem> 
+          <SubMenu title="dropdown">
+            <MenuItem>
+              dropdown 1
+            </MenuItem>
+            <MenuItem>
+              dropdown 2
+            </MenuItem>
+          </SubMenu>        
+          <MenuItem>
+            cool link 3
           </MenuItem>
         </Menu>
       </header>

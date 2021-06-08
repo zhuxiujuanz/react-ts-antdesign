@@ -1,0 +1,14 @@
+.viking-tabs{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: $tabs-border-width solid $tabs-border-color;
+    box-shadow: $tabs-box-shadow;
+    >.viking-tabs-tab{
+        padding:$tab-padding-y $tab-padding-x;
+        cursor: pointer;
+        &.is-active, &:hover {
+            color: $tab-active-color;
+            border-bottom: $tab-active-border-width solid $tab-active-color;
+          }
+    }
+}

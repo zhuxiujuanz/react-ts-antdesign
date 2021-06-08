@@ -66,4 +66,5 @@ Menu.defaultProps = {
   mode: 'horizontal',
 }
 
+
 export default Menu

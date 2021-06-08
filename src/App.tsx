@@ -5,7 +5,8 @@ import Alert from "./components/Alert/alert";
 import Menu from "./components/Menu/menu";
 import MenuItem from "./components/Menu/menuItem";
 import SubMenu from './components/Menu/subMenu'
-
+import Tabs from "./components/Tabs/tabs";
+import TabPane from "./components/Tabs/tabPane";
 const App:React.FC = () =>{
   return (
     <div className="App">
@@ -39,7 +40,7 @@ const App:React.FC = () =>{
           </MenuItem>
         </Menu> */}
 
-        <Menu defaultIndex={'0'} onSelect={(index) => {alert(index)}} mode="vertical" defaultOpenSubMenus={['2']}>
+        {/* <Menu defaultIndex={'0'} onSelect={(index) => {alert(index)}} mode="vertical" defaultOpenSubMenus={['2']}>
           <MenuItem>
             cool link
           </MenuItem>
@@ -57,7 +58,16 @@ const App:React.FC = () =>{
           <MenuItem>
             cool link 3
           </MenuItem>
-        </Menu>
+        </Menu> */}
+        <Tabs defaultActiveKey={'0'} onChange={(index) => {alert(index)}}>
+          <TabPane index={'0'}>
+            dd
+          </TabPane>
+          <TabPane index={'1'}>
+            dd
+          </TabPane>
+        </Tabs>
+        
       </header>
     </div>
   );
